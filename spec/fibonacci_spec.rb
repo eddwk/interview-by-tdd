@@ -31,12 +31,29 @@ describe Fibonacci do
   end
 
   describe "recursive" do
-    it "should return 3 if 2 is input" do
-      # expect(true).to be false
+    it "should return 0 if 0 is input" do
+      expect(subject.recursive(0)).to eq(0)
     end
-    xit "should return 1 if 1 is input" do
+
+    it "should return 1 if 1 is input" do
+      expect(subject.recursive(1)).to eq(1)
+      expect(subject.recursive(2)).to eq(1)
     end
-    xit "should return n! for any n" do
+
+    it "should return 2 if 3 is input" do
+      expect(subject.recursive(3)).to eq(2)
+    end
+
+    it "should return 3 if 4 is input" do
+      expect(subject.recursive(3)).to eq(2)
+    end
+
+    it "should return 5 if 5 is input" do
+      expect(subject.recursive(5)).to eq(5)
+    end
+
+    it "should return 6 if 8 is input" do
+      expect(subject.recursive(6)).to eq(8)
     end
   end
 end
